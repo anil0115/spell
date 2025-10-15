@@ -9,7 +9,7 @@ This project implements a robust Trie (prefix tree) data structure in Python, ap
 1.  **Save the Code:** Save the provided Python code as a single file (e.g., `spell.py`).
 2.  **Dictionary File:** The program expects a dictionary file named **`dictionary.txt`** in the same directory. This file should contain one word per line.
 3.  **Execution:** Run the script from your terminal:
-    `python trie_system.py`
+    `python spell.py`
 4.  The system will initialize, load the dictionary, and enter the interactive CLI.
 
  Design Choices and Assumptions
