@@ -1,6 +1,5 @@
 Test_Output.txt
 
---- Example Interactions Demonstrating All Functionalities ---
 
 Trie-CLI> help
 
@@ -53,3 +52,4 @@ Trie-CLI> spell computerize
 
 Trie-CLI> exit
 Exiting application. Goodbye! 👋
+
