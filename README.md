@@ -1,6 +1,6 @@
 
 
-## Trie Data Structure and Text System
+
 
 ### Overview
 This project implements a robust **Trie** (prefix tree) data structure in Python, applying it to build a basic **auto-completion** and **spell-checking** system via a command-line interface (CLI). The Trie is highly efficient for prefix-based operations, providing **O(L)** complexity for insertion, search, and prefix checking, where $L$ is the length of the word/prefix.
