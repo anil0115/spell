@@ -1,0 +1,74 @@
+Test_Output.txt
+
+--- Example Interactions Demonstrating All Functionalities ---
+
+Trie-CLI> help
+
+--- Available Commands ---
+  **insert <word>** : Add a new word to the dictionary.
+  **search <word>** : Check if a word exists.
+  **prefix <p>** : Check if any word starts with prefix 'p'.
+  **auto <p>** : Get auto-completion suggestions for prefix 'p'.
+  **spell <word>** : Get spelling corrections (1-edit distance).
+  **help** : Show this command list.
+  **exit** : Quits the program.
+-------------------------------------------------------
+
+Trie-CLI> search APPLE
+✅ 'apple' found in the dictionary.
+
+Trie-CLI> search dog
+✅ 'dog' found in the dictionary.
+
+Trie-CLI> search bananaS
+❌ 'bananas' not found. Try 'spell bananas' for corrections.
+
+Trie-CLI> insert BANANAS
+'bananas' inserted successfully.
+
+Trie-CLI> search bananas
+✅ 'bananas' found in the dictionary.
+
+Trie-CLI> prefix app
+✅ A word starting with 'app' exists.
+
+Trie-CLI> prefix xyz
+❌ No word starts with 'xyz'.
+
+Trie-CLI> auto app
+--- Autocomplete Suggestions for 'app' (3 found) ---
+apple, apply, appetizer
+-------------------------------------------------------
+
+Trie-CLI> auto co
+--- Autocomplete Suggestions for 'co' (4 found) ---
+computer, commuter, code, coding
+-------------------------------------------------------
+
+Trie-CLI> auto p
+--- Autocomplete Suggestions for 'p' (3 found) ---
+programming, project, python
+-------------------------------------------------------
+
+Trie-CLI> spell apule
+--- Spell Check for 'apule' ---
+Suggestions (1-edit distance): apple, apply
+-------------------------------------------------------
+
+Trie-CLI> spell appple # Transposition/Replace/Delete error
+--- Spell Check for 'appple' ---
+Suggestions (1-edit distance): apple
+-------------------------------------------------------
+
+Trie-CLI> spell dog
+--- Spell Check for 'dog' ---
+'dog' is spelled correctly!
+-------------------------------------------------------
+
+Trie-CLI> spell xyz
+--- Spell Check for 'xyz' ---
+No close matches found for 'xyz'.
+-------------------------------------------------------
+
+Trie-CLI> exit
+Exiting application. Goodbye! 👋
