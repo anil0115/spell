@@ -11,48 +11,34 @@ Trie-CLI> help
   **auto <p>** : Get auto-completion suggestions for prefix 'p'.
   **spell <word>** : Get spelling corrections (1-edit distance).
   **help** : Show this command list.
-  **exit** : Quits the program.
+  **exit** : Quit the program.
 -------------------------------------------------------
 
-Trie-CLI> search APPLE
-✅ 'apple' found in the dictionary.
+Trie-CLI> search PROJECT
+ 'project' found in the dictionary.
 
-Trie-CLI> search dog
-✅ 'dog' found in the dictionary.
+Trie-CLI> insert computerize
+'computerize' inserted successfully.
 
-Trie-CLI> search bananaS
-❌ 'bananas' not found. Try 'spell bananas' for corrections.
+Trie-CLI> auto c
+--- Autocomplete Suggestions for 'c' (6 found) ---
+cat, car, cart, computer, commuter, code
+-------------------------------------------------------
 
-Trie-CLI> insert BANANAS
-'bananas' inserted successfully.
+Trie-CLI> auto pro
+--- Autocomplete Suggestions for 'pro' (4 found) ---
+programming, project, programmer, program
+-------------------------------------------------------
 
-Trie-CLI> search bananas
-✅ 'bananas' found in the dictionary.
-
-Trie-CLI> prefix app
-✅ A word starting with 'app' exists.
-
-Trie-CLI> prefix xyz
-❌ No word starts with 'xyz'.
-
-Trie-CLI> auto app
---- Autocomplete Suggestions for 'app' (3 found) ---
+Trie-CLI> auto a
+--- Autocomplete Suggestions for 'a' (5 found) ---
 apple, apply, appetizer
+... and 2 more. Use a longer prefix to narrow results.
 -------------------------------------------------------
 
-Trie-CLI> auto co
---- Autocomplete Suggestions for 'co' (4 found) ---
-computer, commuter, code, coding
--------------------------------------------------------
-
-Trie-CLI> auto p
---- Autocomplete Suggestions for 'p' (3 found) ---
-programming, project, python
--------------------------------------------------------
-
-Trie-CLI> spell apule
---- Spell Check for 'apule' ---
-Suggestions (1-edit distance): apple, apply
+Trie-CLI> spell comuter # Deletion error (missing 'm')
+--- Spell Check for 'comuter' ---
+Suggestions (1-edit distance): commuter, computer
 -------------------------------------------------------
 
 Trie-CLI> spell appple # Transposition/Replace/Delete error
@@ -60,14 +46,9 @@ Trie-CLI> spell appple # Transposition/Replace/Delete error
 Suggestions (1-edit distance): apple
 -------------------------------------------------------
 
-Trie-CLI> spell dog
---- Spell Check for 'dog' ---
-'dog' is spelled correctly!
--------------------------------------------------------
-
-Trie-CLI> spell xyz
---- Spell Check for 'xyz' ---
-No close matches found for 'xyz'.
+Trie-CLI> spell computerize
+--- Spell Check for 'computerize' ---
+'computerize' is spelled correctly!
 -------------------------------------------------------
 
 Trie-CLI> exit
